@@ -1,0 +1,13 @@
+universe        = docker
+docker_image    = dapaciat/r_3.6.0
+executable      = /bin/bash
+arguments       = run.sh
+when_to_transfer_output = ON_EXIT
+output                  = $(Cluster)_out.txt
+error                   = $(Cluster)_err.txt
+log                     = $(Cluster)_log.txt
+request_cpus            = 2
+request_memory          = 120GB
+notification = Always
+notify_user = CORREO
+queue 1
